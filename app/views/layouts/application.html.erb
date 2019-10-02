@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Tutorial</title>
+  <%= stylesheet_link_tag    'yeti'%>
+  <%= stylesheet_link_tag    'banner'%>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'user_sign_up'%>
+  <%= javascript_include_tag 'yeti' %>
+
+  <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
+  <script src="https://transloadit.edgly.net/releases/uppy/v0.28.0/dist/uppy.min.js"></script>
+  <%if Rails.env.test? then%>
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <%end %>
+  <link href="https://transloadit.edgly.net/releases/uppy/v0.28.0/dist/uppy.min.css" rel="stylesheet" />
+
+  <%= csrf_meta_tags %>
+
+  <%= render "share/nav" %>
+</head>
+<body style="padding-top: 51px;">
+<% flash.each do |type, msg| %>
+  <% if type == "notice" %>
+    <div class="alert alert-info"><%= msg %></div>
+  <% elsif type == "alert" %>
+    <div class="alert alert-danger"><%= msg %></div>
+  <% else %>
+    <div class='alert alert-<%= "#{type}" %>'><%= msg %></div>
+  <% end %>
+<% end %>
+
+<%= yield %>
+</body>
+</html>

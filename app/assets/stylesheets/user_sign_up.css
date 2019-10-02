@@ -1,0 +1,52 @@
+.container {
+    width: 800px;
+}
+
+#sign_up_title {
+    text-align: center;
+}
+
+#log_in_title {
+    text-align: center;
+}
+
+#sign_up_form {
+    text-align: left;
+    position:absolute;
+    width: 400px;
+    top: 10%;
+    left: 40%;
+    border-radius: 25px;
+    border: 2px solid darkorange;
+    padding: 20px;
+}
+
+#sign_up_text1, #sign_up_text2, #sign_up_text3, #sign_up_text4, #sign_up_text5, #email_text {
+    width: 100%;
+}
+#log_in_text1, #log_in_text2 {
+    width: 100%;
+}
+
+#submit_sign_up, #log_in_submit,#reset_password_button {
+    margin-top: 10px;
+    padding:5px 15px;
+    background:dodgerblue;
+    border-color: #6db1df;
+    cursor:pointer;
+    border-radius: 5px;
+}
+#submit_sign_up:hover {
+    background-color: #82bce3;
+}
+#log_in_submit:hover {
+    background-color: #82bce3;
+}
+
+#error_explanation{
+    font-size: 12px;
+}
+#option1, #option2{
+
+
+}
