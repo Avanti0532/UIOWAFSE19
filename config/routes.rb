@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin/dashboard', as: 'rails_admin'
   devise_for :students, controllers: {
       sessions: 'students/sessions',
       registrations: 'students/registrations'
@@ -14,6 +15,14 @@ Rails.application.routes.draw do
     root 'homepage#index', as: :authenticated_faculty_root
   end
 
+  #authenticated :admin do
+  #  root rails_admin_path, as: :authenticated_admin_root
+  #end
+
+  devise_for :admins, controllers: {
+      sessions: 'admins/sessions',
+      registrations: 'admins/registrations'
+  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
