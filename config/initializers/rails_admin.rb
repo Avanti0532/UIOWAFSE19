@@ -43,9 +43,7 @@ RailsAdmin.config do |config|
     edit do
       except ['Student','Faculty']
     end
-    delete do
-      only ['Course', 'Level']
-    end
+    delete
     show_in_app
 
     ## With an audit adapter, you can add:

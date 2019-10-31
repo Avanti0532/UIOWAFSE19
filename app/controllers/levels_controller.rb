@@ -1,2 +1,0 @@
-class LevelsController < ApplicationController
-end

@@ -5,13 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-levels = [
-    {:course_level => 'Beginner'},
-    {:course_level => 'Intermediate'},
-    {:course_level => 'Advanced'}
-]
-
-levels.each do |level|
-  Level.create!(level)
-end
