@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       registrations: 'faculties/registrations'}
 
   authenticated :student do
-    root 'homepage#index', as: :authenticated_student_root
+    root 'courses#index', as: :authenticated_student_root
   end
   authenticated :faculty do
     root 'homepage#index', as: :authenticated_faculty_root
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       sessions: 'admins/sessions',
       registrations: 'admins/registrations'
   }
+  resources :courses
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

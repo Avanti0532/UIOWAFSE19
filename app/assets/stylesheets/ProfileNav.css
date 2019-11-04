@@ -1,0 +1,18 @@
+.navbar-fixed-left {
+    width: 150px;
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+    float: none;  /* Cancel default li float: left */
+    width: 149px;
+}
+.navbar-fixed-left + .container {
+    padding-left: 120px;
+}
+
+#icon_evaluation_submit, #text_evauluation_submit {
+    color: #2fb471
+}
