@@ -16,3 +16,7 @@
 #icon_evaluation_submit, #text_evauluation_submit {
     color: #2fb471
 }
+#cr_desc,#cr_faculty,#cr_fee,#cr_level,#cr_name,#cr_time {
+    font-size: 17px;
+    font-family: 'Book Antiqua', sans-serif;
+}

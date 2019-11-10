@@ -53,7 +53,10 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', :require=>false
 end
-
+group :test do
+  gem 'cucumber-rails', :require=>false
+  gem 'database_cleaner'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

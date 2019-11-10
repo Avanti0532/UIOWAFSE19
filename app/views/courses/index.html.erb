@@ -30,7 +30,7 @@
           <td><%=course.faculty.first_name + " " + course.faculty.last_name %></td>
           <td><%=course.applicable_fee %></td>
           <td><%=course.time%></td>
-          <td><%= link_to 'view'%></td>
+          <td><%= link_to 'view',course%></td>
         </tr>
       <% end %>
       </tbody>

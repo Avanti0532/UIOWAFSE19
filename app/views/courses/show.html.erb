@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag 'course' %>
+<div class="container">
+
+ <div>
+  <h2 id ="cname">Course Name</h2>
+  <h4 id = "cr_name"><%=@course.course_name%></h4>
+ </div>
+
+  <div>
+    <h2 id ="level">Course Level</h2>
+    <h3 id = "cr_level"><%=@course.level.course_level%></h3>
+  </div>
+
+  <div>
+    <h2 id ="faculty">Course Faculty</h2>
+    <h3 id = "cr_faculty"><%=@course.faculty.first_name + " " + @course.faculty.last_name%></h3>
+  </div>
+
+  <div>
+    <h2 id ="fee">Course Fee</h2>
+    <h3 id = "cr_fee"><%=@course.applicable_fee%></h3>
+  </div>
+
+  <div>
+    <h2 id ="time">Time</h2>
+    <h3 id = "cr_time"><%=@course.time %></h3>
+  </div>
+
+  <div>
+    <h2 id ="desc">Description</h2>
+    <h3 id = "cr_desc"><%=@course.description%></h3>
+  </div>
+
+</div>
