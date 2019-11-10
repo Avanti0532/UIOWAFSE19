@@ -7,7 +7,7 @@ Rails.application.config.assets.precompile += %w( banner.css )
 Rails.application.config.assets.precompile += %w( yeti.js )
 Rails.application.config.assets.precompile += %w( user_sign_up.css )
 Rails.application.config.assets.precompile += %w( course.js )
-Rails.application.config.assets.precompile += %w( ProfileNav.css )
+Rails.application.config.assets.precompile += %w( course.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

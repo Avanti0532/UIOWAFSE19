@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'sProfileNav' %>
+<%= stylesheet_link_tag 'course' %>
 <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
 <%= javascript_include_tag 'course' %>
 
@@ -26,8 +26,8 @@
       <% @courses.each do |course| %>
         <tr>
           <td><%=course.course_name %></td>
-          <td><%=course.level_id %></td>
-          <td><%=course.faculty_id %></td>
+          <td><%=course.level.course_level %></td>
+          <td><%=course.faculty.first_name + " " + course.faculty.last_name %></td>
           <td><%=course.applicable_fee %></td>
           <td><%=course.time%></td>
           <td><%= link_to 'view'%></td>
