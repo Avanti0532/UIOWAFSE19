@@ -20,3 +20,12 @@
     font-size: 17px;
     font-family: 'Book Antiqua', sans-serif;
 }
+
+
+div.container {
+    width: 65%;
+}
+
+#cr_desc{
+    text-align: justify;
+}

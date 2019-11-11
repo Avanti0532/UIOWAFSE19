@@ -22,7 +22,6 @@ end
 
 def sign_up
   visit '/students/sign_up'
-  #print page.html
   fill_in 'sign_up_text1', with: @student[:first_name]
   fill_in 'sign_up_text2', with: @student[:last_name]
   fill_in 'sign_up_text3', with: @student[:email]
