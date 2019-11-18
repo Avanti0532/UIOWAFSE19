@@ -1,6 +1,13 @@
 <%= stylesheet_link_tag 'course' %>
 <div class="container">
-
+  <br>
+  <div>
+    <%if @reg.blank? %>
+      <%= link_to "Register",registrations_path(:param => @course.id), :method => :post, data: {confirm: 'Are you sure you want to register in this course?'}%>
+    <%else %>
+      <h4 id = "cr_enroll">Enrolled</h4>
+    <%end%>
+  </div>
  <div>
   <h2 id ="cname">Course Name</h2>
   <h4 id = "cr_name"><%=@course.course_name%></h4>
@@ -13,7 +20,20 @@
 
   <div>
     <h2 id ="faculty">Course Faculty</h2>
-    <h3 id = "cr_faculty"><%=@course.faculty.first_name + " " + @course.faculty.last_name%></h3>
+    <% if !@course.faculty.nil?%>
+     <h3 id = "cr_faculty"><%=@course.faculty.first_name + " " + @course.faculty.last_name%></h3>
+    <%else%>
+     <h3>None</h3>
+    <%end%>
+  </div>
+
+  <div>
+    <h2 id ="prerequisite">Course Prerequisite</h2>
+    <%if @preq.blank? %>
+      <h3 id = "cr_prereq">None</h3>
+    <%else %>
+      <h3 id = "cr_prereq"><%=Course.where(:id => @preq).pluck(:course_name)[0]%></h3>
+    <%end %>
   </div>
 
   <div>

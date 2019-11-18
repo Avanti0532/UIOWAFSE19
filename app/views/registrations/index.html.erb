@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'course' %>
 <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
-<%= javascript_include_tag 'course' %>
+<%= javascript_include_tag 'registration' %>
 
 <% if student_signed_in? then %>
   <div class="navbar navbar-inverse navbar-fixed-left ">
@@ -11,30 +11,18 @@
   </div>
   <div class="container">
     <h1>Courses</h1>
-    <table id='coursesTable' class="table table-striped table-bordered">
+    <table id='registrationsTable' class="table table-striped table-bordered">
       <thead>
       <tr>
         <th>Course Name</th>
-        <th>Level</th>
-        <th>Faculty</th>
-        <th>Applicable fee</th>
-        <th>Time</th>
-        <th>Description</th>
+        <th>Assignments</th>
       </tr>
       </thead>
       <tbody>
-      <% @courses.each do |course| %>
+      <% @registrations.each do |registration| %>
         <tr>
-          <td><%=course.course_name %></td>
-          <td><%=course.level.course_level %></td>
-          <%if !course.faculty.first_name.nil?%>
-           <td><%=course.faculty.first_name + " " + course.faculty.last_name %></td>
-          <%else%>
-           <td></td>
-          <%end%>
-          <td><%=course.applicable_fee %></td>
-          <td><%=course.time%></td>
-          <td><%= link_to 'view',course%></td>
+          <td><%=registration.course.course_name %></td>
+          <td><%= link_to 'view assignments'%></td>
         </tr>
       <% end %>
       </tbody>
@@ -43,4 +31,4 @@
 <% else %>
   <p id="notice">You need to log in to continue.</p>
   <%= link_to "Login", new_student_session_path %>
-<% end %>
+<%end%>

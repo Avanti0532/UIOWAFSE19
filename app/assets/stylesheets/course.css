@@ -16,11 +16,10 @@
 #icon_evaluation_submit, #text_evauluation_submit {
     color: #2fb471
 }
-#cr_desc,#cr_faculty,#cr_fee,#cr_level,#cr_name,#cr_time {
+#cr_desc,#cr_faculty,#cr_fee,#cr_level,#cr_name,#cr_time,#cr_prereq {
     font-size: 17px;
     font-family: 'Book Antiqua', sans-serif;
 }
-
 
 div.container {
     width: 65%;
@@ -28,4 +27,14 @@ div.container {
 
 #cr_desc{
     text-align: justify;
+}
+
+#registration {
+    top: 5%;
+    right: -60%;
+}
+
+#cr_enroll{
+    color: #2fb471;
+    font-style: italic;
 }

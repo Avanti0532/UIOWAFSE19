@@ -44,7 +44,7 @@ RailsAdmin.config do |config|
       except ['Student','Faculty']
     end
     delete do
-      only ['Course', 'Level']
+      only ['Course', 'Level', 'Prerequisite']
     end
     show_in_app
 
