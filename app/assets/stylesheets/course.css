@@ -21,8 +21,12 @@
     font-family: 'Book Antiqua', sans-serif;
 }
 
-div.container {
+#list_course, #show_course {
     width: 65%;
+}
+
+#register_course{
+    width: 50%;
 }
 
 #cr_desc{
@@ -30,8 +34,11 @@ div.container {
 }
 
 #registration {
-    top: 5%;
-    right: -60%;
+    position: relative;
+    float: right;
+    top: 20px;
+    font-size: 18px;
+    font-style: italic;
 }
 
 #cr_enroll{

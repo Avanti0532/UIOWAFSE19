@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag 'course' %>
-<div class="container">
+<div id="show_course" class="container">
   <br>
-  <div>
+  <div id="registration">
     <%if @reg.blank? %>
-      <%= link_to "Register",registrations_path(:param => @course.id), :method => :post, data: {confirm: 'Are you sure you want to register in this course?'}%>
+      <%= link_to "Register",registrations_path(:param => @course.id),:method => :post, data: {confirm: 'Are you sure you want to register in this course?'}%>
     <%else %>
       <h4 id = "cr_enroll">Enrolled</h4>
     <%end%>
