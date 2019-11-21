@@ -1,6 +1,6 @@
-class CreateRegistrations < ActiveRecord::Migration
+class CreateEnrollments < ActiveRecord::Migration
   def change
-    create_table :registrations do |t|
+    create_table :enrollments do |t|
       t.references :course
       t.references :student
       t.datetime :registration_datetime

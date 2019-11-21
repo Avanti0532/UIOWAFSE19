@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
 
   def show
     id = params[:id]
-    @reg = Registration.where(:course_id => id, :student_id => current_student.id)
+    @reg = Enrollment.where(:course_id => id, :student_id => current_student.id)
     @preq = Prerequisite.where(:course_id => id).pluck(:prereq_id)
     @course = Course.find(id)
   end
