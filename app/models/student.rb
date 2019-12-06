@@ -4,5 +4,5 @@ class Student < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :first_name, :last_name,:email, :password, presence: true
-  has_many :registration
+  has_many :enrollments
 end
