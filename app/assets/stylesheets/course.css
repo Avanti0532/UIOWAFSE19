@@ -16,16 +16,32 @@
 #icon_evaluation_submit, #text_evauluation_submit {
     color: #2fb471
 }
-#cr_desc,#cr_faculty,#cr_fee,#cr_level,#cr_name,#cr_time {
+#cr_desc,#cr_faculty,#cr_fee,#cr_level,#cr_name,#cr_time,#cr_prereq {
     font-size: 17px;
     font-family: 'Book Antiqua', sans-serif;
 }
 
-
-div.container {
+#list_course, #show_course {
     width: 65%;
+}
+
+#register_course{
+    width: 50%;
 }
 
 #cr_desc{
     text-align: justify;
+}
+
+#registration {
+    position: relative;
+    float: right;
+    top: 20px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#cr_enroll{
+    color: #2fb471;
+    font-style: italic;
 }

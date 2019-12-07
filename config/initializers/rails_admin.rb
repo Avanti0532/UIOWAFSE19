@@ -36,20 +36,21 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new do
-      except ['Student','Faculty']
+      except ['Student','Faculty','Registration']
     end
     bulk_delete
     show
     edit do
-      except ['Student','Faculty']
+      except ['Student','Faculty','Registration']
     end
     delete do
-      only ['Course', 'Level']
+      only ['Course', 'Level', 'Prerequisite']
     end
     show_in_app
-
-    ## With an audit adapter, you can add:
-    # history_index
-    # history_show
+  end
+  config.model 'Course' do
+    create do
+      exclude_fields :registration
+    end
   end
 end
