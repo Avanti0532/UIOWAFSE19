@@ -58,3 +58,6 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 require 'simplecov'
 SimpleCov.start 'rails'
 
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+Capybara.server = :webrick

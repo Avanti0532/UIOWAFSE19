@@ -14,8 +14,8 @@ end
 
 def log_in_student
   visit new_student_session_path
-  fill_in 'Email', with: @saved_student_data[:email]
-  fill_in 'Password', with: @saved_student_data[:password]
+  fill_in 'log_in_text1', with: @saved_student_data[:email]
+  fill_in 'log_in_text2', with: @saved_student_data[:password]
   click_button 'Log in'
 end
 

@@ -27,6 +27,14 @@ Given(/the following (.*?) have been added to (.*?) Database:/) do |user, table_
     user_table.hashes.each do |student|
       Student.create(student)
     end
+  when 'Level'
+    user_table.hashes.each do |level|
+      Level.create(level)
+    end
+  when 'Course'
+    user_table.hashes.each do |course|
+      Course.create(course)
+    end
   end
 end
 
