@@ -50,12 +50,15 @@ group :development, :test do
   gem 'rspec', '~>3.5'
   gem 'sqlite3', '~> 1.3.6'
   gem 'rspec-rails'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'faker'
   gem 'simplecov', :require=>false
 end
 group :test do
   gem 'cucumber-rails', :require=>false
   gem 'database_cleaner'
+  gem 'rspec-expectations'
+  gem 'regressor', '~> 0.6.2'
+  gem 'shoulda-matchers', '2.6.1'
 end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
