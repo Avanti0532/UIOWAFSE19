@@ -29,6 +29,7 @@ gem 'rails-assets-datatables', source: 'https://rails-assets.org'
 
 gem 'jquery-datatables-rails'
 gem 'rails_admin'
+gem 'poltergeist'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
