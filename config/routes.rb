@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'assignments/index'
+
+  get 'assignments/new'
+
+  get 'assignments/create'
+
+  get 'syllabuses/index'
+
+  get 'syllabuses/new'
+
+  get 'syllabuses/create'
+
+  get 'syllabuses/destroy'
+
   mount RailsAdmin::Engine => '/admin/dashboard', as: 'rails_admin'
   devise_for :students, controllers: {
       sessions: 'students/sessions',
@@ -25,6 +39,8 @@ Rails.application.routes.draw do
   }
   resources :courses
   resources :enrollments
+  resources :syllabuses
+  resources :assignments
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

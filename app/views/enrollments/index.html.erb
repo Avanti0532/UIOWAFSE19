@@ -16,6 +16,7 @@
       <tr>
         <th>Course Name</th>
         <th>Date of Registration</th>
+        <th>Syllabus</th>
         <th>Assignments</th>
       </tr>
       </thead>
@@ -24,7 +25,8 @@
         <tr>
           <td><%=enroll.course.course_name %></td>
           <td><%=enroll.registration_datetime.to_date %></td>
-          <td><%= link_to 'View assignments'%></td>
+          <td><%= link_to 'View Syllabus',syllabuses_path(name: enroll.course.course_name)%></td>
+          <td><%=link_to 'View Assignments',assignments_path(name: enroll.course.course_name)%></td>
         </tr>
       <% end %>
       </tbody>

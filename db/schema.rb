@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191121181711) do
+ActiveRecord::Schema.define(version: 20191208023905) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20191121181711) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "assignments", force: :cascade do |t|
+    t.string   "attachment"
+    t.float    "grade"
+    t.integer  "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "due_date"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string  "course_name"
@@ -81,5 +90,15 @@ ActiveRecord::Schema.define(version: 20191121181711) do
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true
   add_index "students", ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
+
+  create_table "syllabuses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "course_id"
+  end
+
+  add_index "syllabuses", ["course_id"], name: "index_syllabuses_on_course_id"
 
 end

@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag 'course' %>
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<%= javascript_include_tag 'assignment' %>
+
+<% if student_signed_in? then %>
+  <div class="navbar navbar-inverse navbar-fixed-left ">
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Registered Courses", enrollments_path, class: "nav-link"%></li>
+      <li><%= link_to "Assignments", class: "nav-link"%></li>
+    </ul>
+  </div>
+  <div id="assignment_course" class="container">
+    <h1><%=@course_name%></h1>
+    <br><br>
+    <table id='assignmentsTable' class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th>Assignment</th>
+        <th>Due Date</th>
+        <th>Grade</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @assignments.each do |assignment| %>
+        <tr>
+          <td><%=link_to "#{assignment.attachment_identifier}", assignment.attachment_url,:target => '_blank'%></td>
+          <td><%= assignment.due_date.strftime("%Y-%m-%d  %I:%M:%S %p")%></td>
+          <td><%= assignment.grade%></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <p id="notice">You need to log in to continue.</p>
+  <%= link_to "Login", new_student_session_path %>
+<%end%>

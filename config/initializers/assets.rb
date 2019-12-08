@@ -9,6 +9,8 @@ Rails.application.config.assets.precompile += %w( user_sign_up.css )
 Rails.application.config.assets.precompile += %w( course.js )
 Rails.application.config.assets.precompile += %w( course.css )
 Rails.application.config.assets.precompile += %w( registration.js )
+Rails.application.config.assets.precompile += %w( syllabus.js )
+Rails.application.config.assets.precompile += %w( assignment.js )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
