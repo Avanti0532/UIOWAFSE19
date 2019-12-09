@@ -24,7 +24,11 @@
       <% @assignments.each do |assignment| %>
         <tr>
           <td><%=link_to "#{assignment.attachment_identifier}", assignment.attachment_url,:target => '_blank'%></td>
-          <td><%= assignment.due_date.strftime("%Y-%m-%d  %I:%M:%S %p")%></td>
+          <%if assignment.due_date.blank? %>
+            <td></td>
+          <%else %>
+           <td><%= assignment.due_date.strftime("%Y-%m-%d  %I:%M:%S %p")%></td>
+          <%end%>
           <td><%= assignment.grade%></td>
         </tr>
       <% end %>

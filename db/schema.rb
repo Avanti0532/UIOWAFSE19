@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191208023905) do
+ActiveRecord::Schema.define(version: 20191208185223) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20191208023905) do
     t.float   "applicable_fee"
     t.string  "description"
     t.string  "time"
+    t.string  "attachment"
   end
 
   create_table "enrollments", force: :cascade do |t|
