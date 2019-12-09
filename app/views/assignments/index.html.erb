@@ -18,6 +18,7 @@
         <th>Assignment</th>
         <th>Due Date</th>
         <th>Grade</th>
+        <th>Submit Assignment</th>
       </tr>
       </thead>
       <tbody>
@@ -30,6 +31,7 @@
            <td><%= assignment.due_date.strftime("%Y-%m-%d  %I:%M:%S %p")%></td>
           <%end%>
           <td><%= assignment.grade%></td>
+          <td><%= link_to "Submit Assignment", new_assignment_path%></td>
         </tr>
       <% end %>
       </tbody>
