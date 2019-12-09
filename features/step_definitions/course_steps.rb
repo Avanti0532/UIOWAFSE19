@@ -21,3 +21,22 @@ Then(/^I should be able to see (.*?) information$/) do |course|
   expect(page).to have_current_path(/courses\/[0-9]+/)
   expect(page).to have_content(course)
 end
+
+And(/^I click on register$/) do
+  click_link 'Register'
+
+end
+
+Then(/^I should be successfully registered$/) do
+  expect(page).to have_content('You are successfully registered in this course')
+end
+
+Then(/^I should receive error message$/) do
+  expect(page).to have_content('Please complete prerequisite course before registration')
+end
+
+Then(/^I should see the course in registered course section$/) do
+  click_on 'Online Tutorial'
+  click_on 'Registered Courses'
+  expect(page).to have_content('Database Systems')
+end

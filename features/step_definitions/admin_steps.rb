@@ -35,6 +35,14 @@ Given(/the following (.*?) have been added to (.*?) Database:/) do |user, table_
     user_table.hashes.each do |course|
       Course.create(course)
     end
+  when 'Prerequisite'
+    user_table.hashes.each do |prerequisite|
+      Prerequisite.create(prerequisite)
+    end
+  when 'Enrollment'
+    user_table.hashes.each do |enrollment|
+      Enrollment.create(enrollment)
+    end
   end
 end
 
