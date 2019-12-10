@@ -33,6 +33,9 @@
 #assignment_course {
     width: 57%
 }
+#syllabus_course {
+    width: 54%
+}
 #cr_desc{
     text-align: justify;
 }
