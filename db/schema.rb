@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191208185223) do
+ActiveRecord::Schema.define(version: 20191210012810) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,9 +32,12 @@ ActiveRecord::Schema.define(version: 20191208185223) do
     t.string   "attachment"
     t.float    "grade"
     t.integer  "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.datetime "due_date"
+    t.string   "sub_attachment"
+    t.datetime "sub_dtime"
+    t.float    "out_of"
   end
 
   create_table "courses", force: :cascade do |t|

@@ -8,6 +8,7 @@
 .navbar-fixed-left .navbar-nav > li {
     float: none;  /* Cancel default li float: left */
     width: 149px;
+
 }
 .navbar-fixed-left + .container {
     padding-left: 120px;
@@ -29,6 +30,9 @@
     width: 50%;
 }
 
+#assignment_course {
+    width: 55%
+}
 #cr_desc{
     text-align: justify;
 }

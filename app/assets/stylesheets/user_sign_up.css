@@ -21,6 +21,17 @@
     padding: 20px;
 }
 
+#assign_form {
+    text-align: left;
+    position:absolute;
+    width: 400px;
+    top: 10%;
+    left: 2%;
+    border-radius: 25px;
+    border: 2px solid darkorange;
+    padding: 20px;
+}
+
 #sign_up_text1, #sign_up_text2, #sign_up_text3, #sign_up_text4, #sign_up_text5, #email_text {
     width: 100%;
 }

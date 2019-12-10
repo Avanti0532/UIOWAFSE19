@@ -1,7 +1,9 @@
-<div class = "well">
-  <%= form_for @assignment, html: { multipart: true } do |f| %>
+<div class = "well", id="assign_form">
+  <%= form_for @assignment do |f| %>
     <%= f.label :attachment %>
-    <%= f.file_field :attachment %>
+    <%= f.hidden_field :sub_attachment, name: "id", value: @id %>
+    <%= f.file_field :sub_attachment %>
+    <br>
     <%= f.submit "Save", class: "btn btn-primary" %>
   <% end %>
 </div>
