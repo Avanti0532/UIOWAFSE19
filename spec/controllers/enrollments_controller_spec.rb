@@ -21,8 +21,8 @@ RSpec.describe EnrollmentsController, type: :controller do
       @mock_student = Student.new(id: 1, first_name: 'John', last_name: 'Doe', email: 'john@example.com', password: 'test12345')
       @mock_student.save
       controller.stub(:current_student).and_return(@mock_student)
-      @mock_registration = Enrollment.new(id: 1, course_id: 1, student_id:1, registration_datetime: '2019-12-07 01:54:40')
-      @mock_registration_1 = Enrollment.new(id: 1, course_id: 2, student_id:1, registration_datetime: '2019-12-05 01:54:40')
+      @mock_registration = Enrollment.create(id: 1, course_id: 1, student_id:1, registration_datetime: '2019-12-07 01:54:40')
+      @mock_registration_1 = Enrollment.create(id: 2, course_id: 2, student_id:1, registration_datetime: '2019-12-05 01:54:40')
       @prerequisite = Prerequisite.create(id:1,course_id: 1, prereq_id:2 )
     end
     it 'flash notice on successful registration' do

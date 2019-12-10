@@ -11,12 +11,13 @@ class AssignmentsController < ApplicationController
 
   def create
     @assignment = Assignment.find(params[:id])
-    @result = @assignment.update_attributes(:sub_attachment => params[:assignment][:sub_attachment], :sub_dtime => Time.now)
+    @course_name = Course.where(id: @assignment.course_id).pluck('course_name')
+    @result = @assignment.update_attributes(sub_attachment: params[:assignment][:sub_attachment], sub_dtime: Time.now)
 
     if @result
-      redirect_to assignments_path, notice: "The assignment has been uploaded successfully."
+      redirect_to assignments_path(name: @course_name[0]), notice: "The assignment has been uploaded successfully."
     else
-      redirect_to assignments_path, notice: "There is problem in uploading your assignment."
+      redirect_to assignments_path(name: @course_name[0]), notice: "There is problem in uploading your assignment."
     end
   end
 end

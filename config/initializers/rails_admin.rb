@@ -53,4 +53,9 @@ RailsAdmin.config do |config|
       exclude_fields :registration
     end
   end
+  config.model 'Assignment' do
+    create do
+      exclude_fields :sub_attachment, :sub_dtime
+    end
+  end
 end
